@@ -15,7 +15,8 @@
     </ul>
     <form>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" autofocus>
+        <!-- <input pattern="\d*" type="text" id="name" name="name" autocomplete="off" autofocus="false"> -->
+        <input type="number" pattern="\d*" value="1" min="1" max="99" step="1" autocomplete="off" autofocus="false">
     </form>
 </body>
 

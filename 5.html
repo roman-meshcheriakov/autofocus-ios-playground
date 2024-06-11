@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autofocus Example</title>
+</head>
+
+<body>
+
+    <body>
+        <ul>
+            <li>
+                <a href="./index.html">Back</a>
+            </li>
+        </ul>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </form>
+        <br />
+        <button type="button" onclick="handleClick()">Click to focus the input field</button>
+
+        <script>
+
+            function handleClick(params) {
+                queueMicrotask(() => {
+                    focusInput()
+                });
+            }
+            function focusInput() {
+                document.getElementById('name').focus();
+            }
+        </script>
+    </body>
+</body>
+
+</html>
